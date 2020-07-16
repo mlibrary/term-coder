@@ -19,8 +19,13 @@ Or install it yourself as:
 
 ## Usage
 
-In it's most basic form:
+To get termcode from year and semester:
 ```ruby
-	termcode = TermCoder.new(year, term).code
+      code = TermCoder.new().forYearName(1999, "Winter")
+```
+
+To get year and semester from term code:
+```ruby
+      info = TermCoder.new().forCode(1220)
 ```
 
