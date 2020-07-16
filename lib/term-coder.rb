@@ -1,12 +1,5 @@
 
 class TermCoder
-  attr_reader :year, :name, :code
-
-  def initialize(year, name)
-    @year = year;
-    @name = name;
-    @code = forYearName(year, name);
-  end
 
   def forYearName(year, name)
     termCode = (year.to_f - 1974.6).round(1)
@@ -15,10 +8,32 @@ class TermCoder
     return termCode.to_s
   end
 
+  def forCode(code)
+    offset = (code.to_i - 1570) % 50
+    year = 2006 + ((code.to_i - offset - 1570) / 50).to_i
+    name = termCodeOffsetToName(offset)
+    return {:year => year.to_s, :name => name}
+  end
+  
   private
 
+  def termCodeOffsetToName(offset)
+    case offset.to_i
+    when 0
+      return 'WN'
+    when 10
+      return 'SP'
+    when 20
+      return 'SS'
+    when 30
+      return 'SU'
+    when 40
+      return 'FA'
+    end
+  end
+
   def termToCodeOffset(name)
-    case name.upcase
+    case name.to_s.upcase
     when 'WINTER', 'WI', 'WN', '03', '3', 3
       return 0;
     when 'SUMMER', 'SU', '01', '1', 1
