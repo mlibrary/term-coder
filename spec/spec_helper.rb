@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "term-coder"
+require "term_coder"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

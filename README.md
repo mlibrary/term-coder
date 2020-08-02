@@ -21,11 +21,11 @@ Or install it yourself as:
 
 To get termcode from year and semester:
 ```ruby
-      code = TermCoder.new().forYearName(1999, "Winter")
+      code = TermCoder.from_year_name(1999, "Winter")
 ```
 
-To get year and semester from term code:
+To get year and semester (as a Hash) from term code:
 ```ruby
-      info = TermCoder.new().forCode(1220)
+      info = TermCoder.from_code(1220)
 ```
 

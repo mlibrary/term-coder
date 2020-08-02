@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "term-coder"
-  spec.version       = '0.1.0'
+  spec.version       = '0.2.0'
   spec.authors       = ["Heymo Vehse"]
   spec.email         = ["hvehse@umich.edu"]
 
