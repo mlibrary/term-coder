@@ -6,7 +6,7 @@ Nothing special.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'term-coder'
+gem 'term_coder'
 ```
 
 And then execute:
@@ -15,7 +15,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install term-coder
+    $ gem install term_coder
 
 ## Usage
 
